@@ -1,0 +1,7 @@
+{:project-id "hive-olympus-vim"
+ :parent "hive"
+ :description "Olympus projected into Vim: a manifest-only hive-olympus harness brick for hive.vim"
+ :license "MIT"
+ :language :clojure
+ :tags [:hive :olympus :addon :vessel :vim :foss]
+ :carto {:source-roots ["resources" "test" "dev"]}}

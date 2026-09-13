@@ -1,0 +1,12 @@
+{:addon/id "hive.olympus.vim"
+ :addon/kind :addon
+ :addon/type :native
+ :addon/version "0.1.0-SNAPSHOT"
+ :addon/init-ns "hive-olympus.harness"
+ :addon/init-fn "addon-ctor"
+ :addon/config {:olympus/host "hive.vim"}
+ :addon/capabilities #{:olympus-presenter :health-reporting}
+ :addon/dependencies #{"hive.olympus" "hive.vim"}
+ :addon/description "Olympus in Vim: the hive.olympus grid delivered as Vim panel buffers (one per tab) through hive.vim"
+ :addon/maturity :experimental
+ :addon/trust-class :foss}

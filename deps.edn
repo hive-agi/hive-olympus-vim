@@ -1,0 +1,17 @@
+{:paths ["resources"]
+
+ ;; hive-olympus and hive-vim are unpublished: develop with the untracked local.deps.edn
+ ;;   clojure -Sdeps "$(cat local.deps.edn)" -M:test
+ :deps {org.clojure/clojure {:mvn/version "1.12.5"}
+        io.github.hive-agi/hive-olympus {:mvn/version "0.1.0"}}
+
+ :aliases
+ {:test {:extra-paths ["test"]
+         :jvm-opts ["-Xmx1g"]
+         :main-opts ["-m" "hive-olympus-vim.test-runner"]}
+
+  ;; Real-Vim check: needs hive-vim (local.deps.edn), vim and tmux.
+  ;;   clojure -Sdeps "$(cat local.deps.edn)" -M:dev -m hive-olympus-vim.vim-e2e
+  :dev {:extra-paths ["dev"]
+        :extra-deps {io.github.hive-agi/hive-vessel {:mvn/version "0.1.2"}}
+        :jvm-opts ["-Xmx1g"]}}}
