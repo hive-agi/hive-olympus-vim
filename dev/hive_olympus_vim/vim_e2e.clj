@@ -21,21 +21,17 @@
             [hive-addon.protocol :as addon]
             [hive-vessel.doc :as doc]
             [hive-vim.addon :as vim-addon]
-            [hive-vim.client :as client])
+            [hive-vim.client :as client]
+            [hive-olympus.demo :as demo])
   (:import [java.nio.file Files]
            [java.nio.file.attribute FileAttribute]))
 
 (def roster-size (atom 6))
 
 (defn stub-roster
-  "N agents cycling through every status; even ones carry a task."
+  "The core's demo roster of N agents, named vim-demo-N."
   [n]
-  (mapv (fn [i]
-          (cond-> {:agent/id (str "vim-demo-" i)
-                   :agent/name (str "vim-demo-" i)
-                   :agent/status (nth [:working :blocked :error :idle :spawning] (mod i 5))}
-            (even? i) (assoc :agent/task (str "task " i))))
-        (range 1 (inc n))))
+  (demo/roster n "vim-demo"))
 
 (defn roster
   "The roster fn the core manifest names."
