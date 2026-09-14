@@ -3,7 +3,7 @@
  ;; hive-vim is unpublished: develop with the untracked local.deps.edn
  ;;   clojure -Sdeps "$(cat local.deps.edn)" -M:test
  :deps {org.clojure/clojure {:mvn/version "1.12.5"}
-        io.github.hive-agi/hive-olympus {:mvn/version "0.1.1"}}
+        io.github.hive-agi/hive-olympus {:mvn/version "0.1.2"}}
 
  :aliases
  {:test {:extra-paths ["test"]
