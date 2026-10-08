@@ -13,5 +13,5 @@
   ;; Real-Vim check: needs hive-vim (local.deps.edn), vim and tmux.
   ;;   clojure -Sdeps "$(cat local.deps.edn)" -M:dev -m hive-olympus-vim.vim-e2e
   :dev {:extra-paths ["dev"]
-        :extra-deps {io.github.hive-agi/hive-vessel {:mvn/version "0.1.16"}}
+        :extra-deps {io.github.hive-agi/hive-vessel {:mvn/version "0.1.17"}}
         :jvm-opts ["-Xmx1g"]}}}
